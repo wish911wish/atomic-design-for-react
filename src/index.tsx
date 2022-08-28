@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from './components/pages/HomePage';
+import ExpensesPage from "./components/pages/ExpensesPage";
+import InvoicesPage from "./components/pages/InvoicesPage";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -9,7 +12,13 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="expenses" element={<ExpensesPage />} />
+        <Route path="invoices" element={<InvoicesPage />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
