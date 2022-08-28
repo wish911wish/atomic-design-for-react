@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
 import logo from './logo.svg';
+import { primary, background } from './styles/colors'
 import { css, keyframes }  from '@emotion/react'
 
 const app = css({  
@@ -23,7 +24,7 @@ const appLogo = css({
 })
 
 const appHeader = css({
-  backgroundColor: '#282c34',
+  backgroundColor: background,
   minHeight: '100vh',
   display: 'flex',
   flexDirection: 'column',
@@ -34,7 +35,7 @@ const appHeader = css({
 })
 
 const appLink = css({
-  color: '#61dafb',
+  color: primary,
 })
 
 function App() {
