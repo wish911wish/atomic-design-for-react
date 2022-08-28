@@ -1,17 +1,52 @@
+/** @jsxImportSource @emotion/react */
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import { css, keyframes }  from '@emotion/react'
+
+const app = css({  
+  textAlign: "center"
+})
+
+const appLogoSpin = keyframes({
+  'from': {
+    transform: 'rotate(0deg)'
+  },
+  'to': {
+    transform: 'rotate(360deg)'
+  }
+})
+
+const appLogo = css({
+  height: '40vmin',
+  pointerEvents: 'none',
+  animation: `${appLogoSpin} infinite 20s linear`
+})
+
+const appHeader = css({
+  backgroundColor: '#282c34',
+  minHeight: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontSize: 'calc(10px + 2vmin)',
+  color: 'white',
+})
+
+const appLink = css({
+  color: '#61dafb',
+})
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div css={app}>
+      <header css={appHeader}>
+        <img src={logo} css={appLogo} alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
-          className="App-link"
+          css={appLink}
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
