@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import logo from '../../logo.svg';
-import { primary, background } from '../../styles/colors'
+import { primary, background } from '../../styles/color'
 import { css, keyframes }  from '@emotion/react'
 import { Link } from "react-router-dom";
 
@@ -54,8 +54,8 @@ function App() {
         >
           Learn React
         </a>
-        <Link to="/invoices">Invoices</Link> |{" "}
-        <Link to="/expenses">Expenses</Link>
+        <Link to="/invoices" css={appLink}>Invoices</Link>
+        <Link to="/expenses" css={appLink}>Expenses</Link>
       </header>
     </div>
   );

@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
 import logo from './logo.svg';
-import { primary, background } from './styles/colors'
+import { primary, background } from './styles/color'
 import { css, keyframes }  from '@emotion/react'
 
 const app = css({  
