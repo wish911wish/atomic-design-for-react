@@ -8,6 +8,8 @@ export const green = '#22c55e';/*tailwindcss Green 500 */
 export const red = '#ef4444';/*tailwindcss Red 500 */
 
 export const text = black;
+export const info = green;
+export const warning = red;
 
 export const primary = '#61dafb'
 export const success = '#198754'
