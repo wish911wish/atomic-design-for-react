@@ -39,5 +39,3 @@ export default Txt;
 
 export const InfoTxt = txtFactory('info');
 export const WarningTxt = txtFactory('warning');
-
-Object.assign(InfoTxt, { displayName: 'InfoTxt' });
