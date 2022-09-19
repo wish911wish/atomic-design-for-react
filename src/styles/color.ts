@@ -12,6 +12,9 @@ export const textOutlined = white;
 export const info = green;
 export const warning = red;
 
+export const card = white;
+export const cardHeader = black;
+
 export const primary = '#61dafb'
 export const success = '#198754'
 export const danger = '#dc3545'
