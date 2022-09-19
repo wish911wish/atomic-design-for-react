@@ -2,7 +2,8 @@
 import Txt, { InfoTxt } from '../atoms/Txt'
 import Time from '../atoms/Time'
 import Img from '../atoms/Img'
-import Heading, {HeadingUnderlined} from '../atoms/Heading'
+import Heading, {HeadingUnderlined, HeadingOutlined} from '../atoms/Heading'
+import Card, { CardHeader } from '../atoms/Card';
 
 const Notification = () => {
   return (
@@ -14,6 +15,12 @@ const Notification = () => {
       <InfoTxt size='s'>InfoTxt component</InfoTxt>
       <InfoTxt size='l'>InfoTxt l component</InfoTxt>
       <Time>{(new Date()).getTime()}</Time>
+      <Card>
+        <CardHeader>
+          <HeadingOutlined level={ 6 }>HeadingUnderlined component</HeadingOutlined>
+        </CardHeader>
+        <div>Card no card</div>
+      </Card>
     </div>
   );
 }
