@@ -6,3 +6,5 @@ export const lineWidth = '1px'
 export const lineStyle = 'solid'
 
 export const border = `${lineWidth} ${lineStyle} ${line}`
+
+export const radius = '2px'
