@@ -56,6 +56,7 @@ function App() {
         </a>
         <Link to="/invoices" css={appLink}>Invoices</Link>
         <Link to="/expenses" css={appLink}>Expenses</Link>
+        <Link to="/login" css={appLink}>Login</Link>
       </header>
     </div>
   );
