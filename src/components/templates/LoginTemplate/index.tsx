@@ -2,6 +2,7 @@
 import Header from '../../organisms/Header'
 import LoginForm from '../../organisms/LoginForm'
 import styles from './styles'
+import { postLogin } from '../../../services/api/login'
 
 const LoginTemplate = () => {
   return (
@@ -10,7 +11,13 @@ const LoginTemplate = () => {
       <LoginForm
         initialValues={{email: '', password: ''}}
         onValid={async (values) => {
-          console.log('login form values', values)
+          const { data, err } = await postLogin(values);
+          if (data && data.user) {
+            window.location.href = "/";
+          }
+          if (err) {
+            window.alert("ログインに失敗しました");
+          }
         }}
       />
     </main>
