@@ -2,23 +2,20 @@
 import Header from '../../organisms/Header'
 import LoginForm from '../../organisms/LoginForm'
 import styles from './styles'
-import { postLogin } from '../../../services/api/login'
+import { LoginInput } from "../../../services/api/login/type";
 
-const LoginTemplate = () => {
+type Props = {
+  initialValues: LoginInput,
+  onValid: (values: LoginInput) => Promise<void>;
+};
+
+const LoginTemplate = ({initialValues, onValid}: Props) => {
   return (
     <main css={styles.main}>
       <Header/>
       <LoginForm
-        initialValues={{email: '', password: ''}}
-        onValid={async (values) => {
-          const { data, err } = await postLogin(values);
-          if (data && data.user) {
-            window.location.href = "/";
-          }
-          if (err) {
-            window.alert("ログインに失敗しました");
-          }
-        }}
+        initialValues={initialValues}
+        onValid={onValid}
       />
     </main>
   );
